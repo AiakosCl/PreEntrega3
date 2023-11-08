@@ -2,11 +2,26 @@
 
 {% block content %}
     <h2>Lista de Productos</h2>
-    <ul>
-        {% for producto in productos %}
-            <li>{{producto.Descripcion}}:{{produto.precio}}</li>
-        {% endfor %}
-    </ul>
+    <table class="table custom-table">
+        <thead>
+            <tr>
+                <th>Id Producto</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+                <tr>
+                    <td>{{producto.id}}</td>
+                    <td>{{producto.Descripcion}}</td>
+                    <td style="text-align: right;">{{producto.precio_formateado}}</td>
+                    <td style="text-align: right;">{{producto.stock_formateado}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     <a href="{% url 'producto_form' %}">Nuevo producto</a>
 
     {% endblock %}

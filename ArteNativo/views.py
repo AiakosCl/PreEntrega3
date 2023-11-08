@@ -1,3 +1,4 @@
+from typing import Any
 from django.shortcuts import render, redirect
 from .forms import ClienteForm, ProductoForm, VentasForm
 import datetime
@@ -5,6 +6,7 @@ from django.views.generic import ListView
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Ventas, Clientes, Productos
+from django.contrib.humanize.templatetags.humanize import intcomma
 
 
 def index(request):
@@ -25,6 +27,15 @@ class ProductoListView(ListView):
     model = Productos
     template_name = "producto_lista.html"
     context_object_name = 'productos'
+    
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+        for producto in context['productos']:
+            producto.precio_formateado = intcomma(producto.precio).replace(',','.')
+            producto.stock_formateado = intcomma(producto.stock).replace(",",".")
+        
+        return context
+
     
     
 def Producto_form(request):
