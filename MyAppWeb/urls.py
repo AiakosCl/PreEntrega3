@@ -23,7 +23,6 @@ app_label = 'ArteNativo'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('index/', views.index, name='inicio'),
     path('clientes/', views.Cliente_form, name='cliente_form'),  # Cambiado el nombre de la URL
     path('productos/agregar/', views.Producto_form, name='producto_form'),
     path('ventas/', views.Ventas_form, name='ventas_form'),  # Cambiado el nombre de la URL

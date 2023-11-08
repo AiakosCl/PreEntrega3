@@ -42,7 +42,7 @@
     <div style="vertical-align: top; position:relative; display: inline-block; width:45%; min-height:58px; background:none; " id="container_65b495a2">
         <div style="margin: 10px; display: block; " id="container_65b495a2_padding" >
             <div style="text-align:left;">
-        <a href="/index/"><img src="{% static 'ArteNativo/assets/img/inicio.jpg' %}" width="96" height="96" style="vertical-align: bottom; position:relative; display: inline-block; width:8%; background:none; height:auto; " id="img_3b77e554" alt="" title="" border="0" /></a>
+        <a href="{% url 'index' %}"><img src="{% static 'ArteNativo/assets/img/inicio.jpg' %}" width="96" height="96" style="vertical-align: bottom; position:relative; display: inline-block; width:8%; background:none; height:auto; " id="img_3b77e554" alt="" title="" border="0" /></a>
         <span style="font-size:26pt; font-family:'Arial Black', Gadget, sans-serif; color:#014A4A; text-shadow: 2px 2px 2px #000000; ">    ARTE NATIVO <br/></span>
         </div>
             <div style="clear:both"></div>
@@ -94,15 +94,15 @@
 		var js_menu_567eab73= new wsp_menu('menu_567eab73', 'menu_567eab73', 10, null, true);
 
 		js_menu_567eab73.createMenuForItem('menuentry_1ef4dcbd', ["                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">Home ▼</span> ", 'javascript:void(0);', '',
-		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">   Gestión de Clientes</span> ", './clientes/', '',
-		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">   Gestión de Productos</span> ", './productos/', '',
-		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">   Gestión de Pedidos</span> ", './ventas/', '',
+		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">   Gestión de Clientes</span> ", '{% url "cliente_form" %}', '',
+		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">   Gestión de Productos</span> ", '{% url "producto_lista" %}', '',
+		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">   Gestión de Pedidos</span> ", '{% url "ventas_form" %}', '',
 		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">Acerca de...</span> ", 'javascript:void(0);', '',
 		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">Contáctanos</span> ", 'https://wa.me/56990726480" target="Contacto"', '',
 		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\"></span> ", 'javascript:void(0);', '']);
-		js_menu_567eab73.createMenuForItem('menuentry_6b4db2e2', ["                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">Gestión de Clientes</span> ", './clientes/', '',
-		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">Gestión de Productos</span> ", './productos/', '',
-		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">Gestión de Pedidos</span> ", './ventas/', '']);
+		js_menu_567eab73.createMenuForItem('menuentry_6b4db2e2', ["                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">Gestión de Clientes</span> ", '{% url "cliente_form" %}', '',
+		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">Gestión de Productos</span> ", '{% url "producto_lista" %}', '',
+		"                  <span style=\"font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  white-space: nowrap;\">Gestión de Pedidos</span> ", '{% url "ventas_form" %}', '']);
 		js_menu_567eab73.createMenuForItem('menuentry_6771e4d8', []);
 		js_menu_567eab73.createMenuForItem('menuentry_27a5273a', []);
 		js_menu_567eab73.createMenuForItem('menuentry_44c6c9cc', []);

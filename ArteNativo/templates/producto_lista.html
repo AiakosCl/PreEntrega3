@@ -7,6 +7,6 @@
             <li>{{producto.Descripcion}}:{{produto.precio}}</li>
         {% endfor %}
     </ul>
-    <a href="producto/agregar/">Nuevo producto</a>
+    <a href="{% url 'producto_form' %}">Nuevo producto</a>
 
     {% endblock %}
